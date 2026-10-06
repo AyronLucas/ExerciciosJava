@@ -9,6 +9,7 @@ public class Robo {
     public int vitorias;
     public int derrotas;
     public int pontos;
+    public int combate;
 
     Robo(int codigo, String nome, int ataque, int defesa) {
         this.codigo = codigo;
@@ -19,6 +20,7 @@ public class Robo {
         this.vitorias = 0;
         this.derrotas = 0;
         this.pontos = 0;
+        this.combate = 0;
     }
 
     public void receberDano(int dano) {
@@ -36,6 +38,11 @@ public class Robo {
 
     public void registrarDerrota() {
         derrotas = derrotas + 1;
+    }
+
+    public void registrarEmpate() {
+        pontos = pontos + 1;
+        combate = combate + 1;
     }
 
 }
